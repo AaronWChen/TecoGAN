@@ -1,0 +1,41 @@
+[tool.poetry]
+name = "tecogan"
+version = "0.1.0"
+description = "Poetry environment for TecoGAN"
+authors = ["Aaron W Chen <awc33@cornell.edu>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "3.10.10"
+jupyter = "^1.0.0"
+ipython = "^8.14.0"
+numpy = "1.24.3"
+scipy = "^1.11.1"
+scikit-image = "^0.21.0"
+matplotlib = "^3.7.2"
+pandas = "^2.0.3"
+keras = "2.12.0"
+torch = { version = "2.0.1", source = "torch" }
+# torchaudio = { version = "2.0.2", source="torch"}
+torchvision = { version = "0.15.2", source = "torch" }
+tensorflow = "2.12.1"
+
+[tool.poetry.group.dev.dependencies]
+black = "^23.7.0"
+pre-commit = "^3.3.3"
+nbdev = "^2.3.12"
+
+[[tool.poetry.source]]
+name = "torch"
+url = "https://download.pytorch.org/whl/cu117"
+priority = "supplemental"
+
+
+[[tool.poetry.source]]
+name = "PyPI"
+priority = "primary"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
